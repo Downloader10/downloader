@@ -1,3 +1,37 @@
-<html>
-  hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One PDF Downloader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Download Your PDF</h1>
+            <p>Enter the URL to download your PDF from any supported site.</p>
+            <form id="pdfDownloaderForm">
+                <input type="url" id="pdfUrl" placeholder="Enter PDF URL" required>
+                <button type="submit">Download PDF</button>
+            </form>
+            <div class="loader" id="loader" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pdfDownloaderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('loader').style.display = 'block';
+            // Simulate a download delay (replace with actual logic)
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                alert('Your PDF is ready for download!');
+            }, 3000);
+        });
+    </script>
+    
+</body>
 </html>
